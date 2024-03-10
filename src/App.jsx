@@ -6,63 +6,78 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const person = {
+    name: 'sakib',
+    class: 3,
+    sub: ['bangla', 'english', 'math']
+  }
+
   return (
     <>
-      <h1>Vite + React</h1> <hr /> <br />
-      <Profile /> <hr />
-      <MyApp /> <hr /> <br />
-      <AboutPage /> <hr /> <br />
+      <h2>Vite + React</h2> <hr /> <br />
+      {/* <Profile /> <hr /> */}
+
+      <MyApp nam={person.name} /> <hr /> <br />
+
+      {/* <AboutPage /> <hr /> <br /> */}
+
+
+
     </>
   )
 }
 
-function MyButton() {
-  return (
-    <button>I'm a button</button>
-  )
-}
-
-function MyApp() {
+function MyApp(props) {
+  console.log(props);
   return (
     <div>
-      <h1>Welcome To my apps</h1>
-      <MyButton />
+      <h3>Welcome To my apps</h3>
+      {/* <MyButton /> */}
+      <h1></h1>
+
     </div>
   )
 }
 
-function AboutPage() {
-  return (
-    <>
-      <h1>About</h1>
-      <p>Hello there. <br /> How do you do</p>
+// function MyButton() {
+//   return (
+//     <button>I'm a button</button>
+//   )
+// }
 
-    </>
-  )
-}
 
-const user = {
-  name: 'Hedy Lamarr',
-  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-  imageSize: 90,
-};
+// function AboutPage() {
+//   return (
+//     <>
+//       <h1>About</h1>
+//       <p>Hello there. <br /> How do you do</p>
 
-function Profile() {
-  return (
-    <>
-      <h1>{user.name}</h1>
-      <img
-        className="avatar"
-        src={user.imageUrl}
-        alt={'Photo of ' + user.name}
-        style={{
-          width: user.imageSize,
-          height: user.imageSize
-        }}
-      />
-    </>
-  );
-}
+//     </>
+//   )
+// }
+
+// const user = {
+//   name: 'Hedy Lamarr',
+//   imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+//   imageSize: 90,
+// };
+
+// function Profile() {
+//   return (
+//     <>
+//       <h1>{user.name}</h1>
+//       <img
+//         className="avatar"
+//         src={user.imageUrl}
+//         alt={'Photo of ' + user.name}
+//         style={{
+//           width: user.imageSize,
+//           height: user.imageSize
+//         }}
+//       />
+//     </>
+//   );
+// }
 
 
 export default App
